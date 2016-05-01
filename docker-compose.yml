@@ -1,0 +1,12 @@
+repo:
+ image: nginx
+ ports:
+   - "80:80"
+ volumes:
+   - /home/beber007/yocto/poky/build/tmp/deploy/rpm/:/usr/share/nginx/html
+machine:
+  image : docker-base
+  ports :
+    - "22:22"
+  links :
+    - repo:repo
