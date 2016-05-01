@@ -1,3 +1,3 @@
 # DockerForYocto
 
-Bertrand Hurst 2016
+Bertrand Hurst, 2016
