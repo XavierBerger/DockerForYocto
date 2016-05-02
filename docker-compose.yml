@@ -1,11 +1,14 @@
 repo:
- image: nginx
+ build: .
+ dockerfile: Dockerfile-repo
  ports:
    - "80:80"
  volumes:
-   - /home/beber007/yocto/poky/build/tmp/deploy/rpm/:/usr/share/nginx/html
+   - ../poky/build-docker/tmp/deploy/rpm/:/usr/share/nginx/html
+
 machine:
-  image : docker-base
+  build: .
+  dockerfile: Dockerfile-machine
   ports :
     - "22:22"
   links :
